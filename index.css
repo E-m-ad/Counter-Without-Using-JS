@@ -1,0 +1,455 @@
+body {
+  background-color: rgb(249, 248, 247);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 991) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200) {
+  .container {
+    width: 1120px;
+  }
+}
+@media (min-width: 1400) {
+  .container {
+    width: 1230px;
+  }
+}
+
+.counter p:first-child {
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 60px auto;
+  font-size: 30px;
+  color: rgba(73, 70, 70, 0.933);
+  font-weight: 500;
+  border-right: 2px solid black;
+  animation: text-p 3s steps(36) 1s both, blink 0.6s infinite;
+  text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  .counter p:first-child {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .counter p:nth-child(2) {
+    display: none;
+  }
+}
+
+@keyframes text-p {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 482px;
+  }
+}
+@keyframes blink {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  margin-left: auto;
+  max-width: 400px;
+  height: 400px;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .a {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border: 1px solid rgb(214, 209, 209);
+  border-radius: 7px;
+}
+
+.container .b {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border: 1px solid rgb(214, 209, 209);
+  border-radius: 7px;
+  z-index: 3;
+}
+
+.container .c {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border: 1px solid rgb(214, 209, 209);
+  border-radius: 7px;
+  z-index: 2;
+}
+
+.container .a::before {
+  content: "1";
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+.container .a::after {
+  content: "2";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  color: dodgerblue;
+  opacity: 0;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+
+.container .b::before {
+  content: "3";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  color: dodgerblue;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
+
+.container .b::after {
+  content: "4";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  color: dodgerblue;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 4s;
+}
+
+.container .c::after {
+  content: "5";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+}
+
+.container .c::before {
+  content: "6";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 6s;
+}
+
+.container .d::after {
+  content: "7";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 7s;
+}
+
+.container .d::before {
+  content: "8";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 8s;
+}
+
+.container .f::after {
+  content: "9";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 9s;
+}
+
+.container .f::before {
+  content: "10";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 10s;
+}
+.container .g::after {
+  content: "11";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 11s;
+}
+
+.container .g::before {
+  content: "12";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 12s;
+}
+.container .h::after {
+  content: "13";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 13s;
+}
+
+.container .h::before {
+  content: "14";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 14s;
+}
+.container .j::after {
+  content: "15";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 15s;
+}
+
+.container .j::before {
+  content: "16";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 16s;
+}
+.container .k::after {
+  content: "17";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 17s;
+}
+
+.container .k::before {
+  content: "18";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 18s;
+}
+.container .l::after {
+  content: "19";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 19s;
+}
+
+.container .l::before {
+  content: "20";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 20s;
+}
+.container .z::after {
+  content: "19";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 21s;
+}
+.container .z::before {
+  content: "20";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  color: dodgerblue;
+  font-weight: bold;
+  animation: animate 5s linear;
+  animation-iteration-count: 1;
+  animation-delay: 22s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
